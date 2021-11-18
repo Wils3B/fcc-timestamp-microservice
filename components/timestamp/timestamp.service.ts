@@ -1,7 +1,7 @@
 const TimestampService = {
-  getTimestamp(timestamp: string) {
+  getTimestamp(timestamp?: string) {
     const date = `${Number(timestamp)}` === timestamp ? Number(timestamp) : timestamp;
-    const parsedDate = new Date(date);
+    const parsedDate = new Date(date || Date.now());
     if (parsedDate.toString() === 'Invalid Date') {
       throw new Error('Invalid Date');
     }
