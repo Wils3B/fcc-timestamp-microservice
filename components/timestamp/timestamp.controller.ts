@@ -3,7 +3,7 @@ import TimestampService from './timestamp.service';
 
 const TimestampController = {
   getNow(req: Request, res: Response) {
-    res.json(TimestampService.getTimestamp(''));
+    res.json(TimestampService.getTimestamp(`${Date.now()}`));
   },
   getFromParam(req: Request, res: Response) {
     try {

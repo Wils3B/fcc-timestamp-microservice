@@ -11,12 +11,6 @@ describe('Timestamp Service', () => {
     expect(result).toStrictEqual({ unix: 1636675200000, utc: 'Fri, 12 Nov 2021 00:00:00 GMT' });
   });
 
-  it('should return the correct value when nothing is given', function () {
-    const result = TimestampService.getTimestamp();
-    expect(result.unix).toBeDefined();
-    expect(result.unix - Date.now()).toBeLessThan(100);
-  });
-
   it('should throws an exception when the date given is not correct', function () {
     expect(() => TimestampService.getTimestamp('2021-11-12d')).toThrow('Invalid Date');
   });
