@@ -4,7 +4,7 @@
   "description": "FreeCodeCamp timestamp microservice exercice",
   "main": "index.ts",
   "scripts": {
-    "start": "tsc-node index.ts",
+    "start": "ts-node index.ts",
     "start:dev": "nodemon index.ts",
     "start:prod": "node build/index.js",
     "build": "tsc --project ./",
